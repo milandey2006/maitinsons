@@ -1,26 +1,358 @@
-@import "tailwindcss";
+/* Global CSS Reset and Design System */
+/* Maiti & Sons Logistics - Kinetic Architect */
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fef7ff;
+  color: #414750;
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ── TYPOGRAPHY ─────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-manrope), sans-serif;
+  font-weight: 800;
+  color: #1d1b20;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+}
+
+a { color: inherit; }
+
+/* ── SHARED LAYOUT ──────────────────────── */
+.ms-container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* ── NAVBAR ─────────────────────────────── */
+.ms-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  height: 80px;
+  background: rgba(254, 247, 255, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(0, 78, 133, 0.06);
+}
+
+.ms-navbar-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ms-navbar-logo {
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: #004e85;
+  text-decoration: none;
+  letter-spacing: -0.04em;
+  flex-shrink: 0;
+}
+
+.ms-navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  list-style: none;
+}
+
+.ms-navbar-links a {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #506072;
+  text-decoration: none;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.ms-navbar-links a:hover {
+  color: #004e85;
+}
+
+/* Mobile menu button - hidden by default */
+.ms-mobile-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #506072;
+  padding: 6px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mobile dropdown */
+.ms-mobile-menu {
+  display: none;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  right: 0;
+  background: rgba(254, 247, 255, 0.98);
+  backdrop-filter: blur(20px);
+  z-index: 9998;
+  padding: 32px;
+  flex-direction: column;
+  gap: 24px;
+  border-bottom: 1px solid rgba(0,78,133,0.06);
+}
+
+.ms-mobile-menu.open {
+  display: flex;
+}
+
+.ms-mobile-menu a {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1d1b20;
+  text-decoration: none;
+}
+
+/* ── BUTTONS ────────────────────────────── */
+.ms-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 12px 28px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s;
+  white-space: nowrap;
+}
+
+.ms-btn:hover { transform: translateY(-2px); }
+.ms-btn:active { transform: translateY(0); }
+
+.ms-btn-primary {
+  background: linear-gradient(135deg, #004e85 0%, #1a66a6 100%);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(0, 78, 133, 0.28);
+}
+.ms-btn-primary:hover { box-shadow: 0 8px 24px rgba(0,78,133,0.36); }
+
+.ms-btn-secondary {
+  background: #ffffff;
+  color: #004e85;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+.ms-btn-white {
+  background: #fff;
+  color: #004e85;
+}
+
+/* ── CHIPS ──────────────────────────────── */
+.ms-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 14px;
+  border-radius: 99px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.ms-chip-info    { background: rgba(0, 78, 133, 0.08); color: #004e85; }
+.ms-chip-urgent  { background: rgba(153, 0, 50, 0.08); color: #990032; }
+.ms-chip-neutral { background: rgba(80, 96, 114, 0.08); color: #506072; }
+
+/* ── CARDS ──────────────────────────────── */
+.ms-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 36px 28px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.ms-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 24px 56px rgba(0,78,133,0.08);
+}
+
+/* ── ICON BOX ───────────────────────────── */
+.ms-icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: rgba(0, 78, 133, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #004e85;
+  margin-bottom: 20px;
+}
+
+/* ── STAT BLOCK ─────────────────────────── */
+.ms-stat {
+  border-left: 3px solid rgba(0, 78, 133, 0.12);
+  padding-left: 24px;
+}
+.ms-stat-value {
+  font-family: var(--font-manrope), sans-serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 900;
+  color: #1d1b20;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+.ms-stat-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #506072;
+  margin-top: 6px;
+}
+
+/* ── PROCESS ────────────────────────────── */
+.ms-step-num {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #004e85, #1a66a6);
+  color: #fff;
+  font-family: var(--font-manrope), sans-serif;
+  font-weight: 800;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 16px rgba(0,78,133,0.28);
+  margin-bottom: 20px;
+}
+
+/* ── INPUTS (Ghost Border) ──────────────── */
+.ms-input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(200, 198, 208, 0.5);
+  padding: 10px 0;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.9rem;
+  color: #1d1b20;
+  outline: none;
+  transition: border-color 0.25s;
+}
+.ms-input::placeholder { color: #a0aab4; }
+.ms-input:focus { border-bottom-color: #004e85; }
+
+/* ── TIMELINE ───────────────────────────── */
+.ms-timeline-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #004e85;
+  box-shadow: 0 0 0 4px rgba(0,78,133,0.1);
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.ms-timeline-line {
+  width: 2px;
+  flex: 1;
+  min-height: 40px;
+  background: rgba(0,78,133,0.08);
+  margin: 8px 0;
+}
+
+/* ── FOOTER ─────────────────────────────── */
+.ms-footer {
+  background: #141219;
+  color: rgba(254,247,255,0.85);
+  padding: 80px 0 40px;
+}
+
+.ms-footer-col-title {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.28);
+  margin-bottom: 24px;
+}
+
+.ms-footer-link {
+  display: block;
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.42);
+  text-decoration: none;
+  margin-bottom: 14px;
+  transition: color 0.2s;
+}
+.ms-footer-link:hover { color: rgba(255,255,255,0.88); }
+
+/* ── SHADOWS ────────────────────────────── */
+.ms-shadow { box-shadow: 0 8px 32px rgba(0,0,0,0.06), 0 2px 8px rgba(0,0,0,0.04); }
+.ms-shadow-sm { box-shadow: 0 4px 16px rgba(0,0,0,0.05); }
+.ms-shadow-lg { box-shadow: 0 24px 56px rgba(0,0,0,0.1); }
+
+/* ── GLASS ──────────────────────────────── */
+.ms-glass {
+  background: rgba(254, 247, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* ── ACCENT LINE ────────────────────────── */
+.ms-accent-line {
+  width: 48px;
+  height: 3px;
+  background: linear-gradient(90deg, #004e85, #1a66a6);
+  border-radius: 2px;
+}
+
+/* ── UTILITY ────────────────────────────── */
+.ms-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #506072;
+}
+
+/* ── RESPONSIVE ─────────────────────────── */
+@media (max-width: 1024px) {
+  .ms-hide-tablet { display: none !important; }
+}
+
+@media (max-width: 768px) {
+  .ms-container { padding: 0 20px; }
+  .ms-navbar-links { display: none !important; }
+  .ms-mobile-btn { display: flex !important; }
+  .ms-hide-mobile { display: none !important; }
+  .ms-navbar-quote-desktop { display: none !important; }
 }
