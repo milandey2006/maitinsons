@@ -13,9 +13,9 @@ const fadeUp = (delay = 0) => ({
 });
 
 const timeline = [
-  { year: "1982", event: "Founding Vision", desc: "Arjun Maiti starts with a single truck, delivering regional supplies with a promise of 100% reliability." },
-  { year: "1998", event: "Cross-Border Expansion", desc: "The fleet grows to 50 vehicles, establishing the first international freight routes into neighboring territories." },
-  { year: "2012", event: "Digital Transformation", desc: "Maiti & Sons implements real-time satellite tracking and AI-driven route optimization for all logistics nodes." },
+  { year: "1982", event: "Founding Vision", desc: "Maiti & Sons Logistics Pvt. Ltd. starts with a single truck on single port, delivering regional supplies with a promise of 100% reliability." },
+  { year: "1998", event: "Domestic Expansion", desc: "The fleet grows to 50 vehicles, establishing the first domestic freight routes into neighboring territories." },
+  { year: "2012", event: "Digital Transformation", desc: "Maiti & Sons Logistics Pvt. Ltd. implements timely tracking across all logistics nodes." },
   { year: "2024", event: "Global Leadership", desc: "Now a multi-national brand, we handle over 50,000 shipments annually with the same founding precision." },
 ];
 
@@ -37,7 +37,7 @@ export default function About() {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "1.4fr 1fr",
+              gridTemplateColumns: "1fr",
               gap: "80px",
               alignItems: "flex-end",
             }}
@@ -46,7 +46,7 @@ export default function About() {
               <h1
                 style={{
                   fontFamily: "var(--font-manrope), sans-serif",
-                  fontSize: "clamp(2.8rem, 5.5vw, 4.5rem)",
+                  fontSize: "clamp(2.2rem, 4.5vw, 3.8rem)",
                   fontWeight: 900,
                   color: "#1d1b20",
                   letterSpacing: "-0.04em",
@@ -54,7 +54,7 @@ export default function About() {
                   marginBottom: "16px",
                 }}
               >
-                MAITI <span style={{ color: "#004e85" }}>& SONS</span>
+                MAITI & SONS LOGISTICS <span style={{ color: "#004e85" }}>PVT. LTD.</span>
               </h1>
               <h2
                 style={{
@@ -65,33 +65,12 @@ export default function About() {
                   marginBottom: "24px",
                 }}
               >
-                A Legacy of Trust & Precision
+                Formerly known as Maiti & Sons Enterprises.
               </h2>
               <p style={{ fontSize: "1rem", lineHeight: 1.8, color: "#414750", maxWidth: "520px" }}>
                 Navigating global trade with unmatched architectural precision. From local haulage
                 to international freight, we build the bridges that keep commerce moving across every border.
               </p>
-            </div>
-            <div
-              style={{
-                borderLeft: "3px solid rgba(0,78,133,0.1)",
-                paddingLeft: "40px",
-                paddingBottom: "4px",
-              }}
-            >
-              <p className="ms-label" style={{ marginBottom: "12px" }}>Established</p>
-              <div
-                style={{
-                  fontFamily: "var(--font-manrope), sans-serif",
-                  fontSize: "5.5rem",
-                  fontWeight: 900,
-                  color: "#1d1b20",
-                  lineHeight: 1,
-                  letterSpacing: "-0.05em",
-                }}
-              >
-                1982
-              </div>
             </div>
           </div>
         </div>
@@ -127,9 +106,6 @@ export default function About() {
                     </div>
                     {/* Content */}
                     <div style={{ paddingBottom: i < timeline.length - 1 ? "36px" : 0, paddingTop: "0" }}>
-                      <span className="ms-label" style={{ color: "#004e85", display: "block", marginBottom: "6px" }}>
-                        {item.year}
-                      </span>
                       <h4 style={{ fontSize: "1rem", fontWeight: 700, color: "#1d1b20", marginBottom: "8px" }}>
                         {item.event}
                       </h4>

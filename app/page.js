@@ -121,9 +121,9 @@ export default function Home() {
             }}
           >
             {[
-              { value: "15+", label: "Years Experience" },
+              { value: "8+", label: "Years Experience" },
               { value: "2,000+", label: "Deliveries Monthly" },
-              { value: "28+", label: "Cities Covered" },
+              { value: "15+", label: "Cities Covered" },
               { value: "99.8%", label: "On-Time Rate" },
             ].map((s, i) => (
               <motion.div key={i} {...fadeUp(i * 0.1)} className="ms-stat">

@@ -77,9 +77,9 @@ export default function Contact() {
 
               <div style={{ display: "flex", flexDirection: "column", gap: "28px", marginBottom: "48px" }}>
                 {[
-                  { icon: <Phone size={18} />, label: "Call Us", value: "+1 (555) 892-0400" },
-                  { icon: <Mail size={18} />, label: "Email Us", value: "solutions@maitiandsons.com" },
-                  { icon: <MapPin size={18} />, label: "HQ Address", value: "422 Logistics Way, Suite 100\nChicago, IL 60601" },
+                  { icon: <Phone size={18} />, label: "Call Us", value: "+91 98701 20066" },
+                  { icon: <Mail size={18} />, label: "Email Us", value: "support.mselogistics.co.in" },
+                  { icon: <MapPin size={18} />, label: "HQ Address", value: "825, MADHABPUR, Machnan, Purba Medinipur,\nwest Bengal, 721626" },
                 ].map((item, i) => (
                   <div key={i} style={{ display: "flex", gap: "16px", alignItems: "flex-start" }}>
                     <div className="ms-icon-box" style={{ width: "44px", height: "44px", borderRadius: "10px", marginBottom: 0, flexShrink: 0 }}>
@@ -108,9 +108,9 @@ export default function Contact() {
               <div style={{ borderTop: "1px solid rgba(0,78,133,0.07)", paddingTop: "28px" }}>
                 <span className="ms-label" style={{ display: "block", marginBottom: "10px" }}>Working Hours</span>
                 <p style={{ fontSize: "0.875rem", color: "#414750", lineHeight: 1.8 }}>
-                  Mon — Fri: 08:00 AM – 06:00 PM CST
+                  Mon - Fri: 08:00 AM – 06:00 PM IST
                   <br />
-                  Sat: 09:00 AM – 02:00 PM CST
+                  Sat: 09:00 AM – 02:00 PM IST
                 </p>
                 <div style={{ display: "flex", gap: "10px", marginTop: "20px" }}>
                   {[<Share2 key="s" size={15} />, <Globe key="g" size={15} />, <Users key="u" size={15} />].map((icon, i) => (

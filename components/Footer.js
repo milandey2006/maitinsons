@@ -21,16 +21,18 @@ export default function Footer() {
               href="/"
               style={{
                 fontFamily: "var(--font-manrope), sans-serif",
-                fontSize: "1.35rem",
-                fontWeight: 900,
-                color: "#fff",
                 textDecoration: "none",
-                letterSpacing: "-0.04em",
-                display: "block",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "flex-start",
+                gap: "2px",
                 marginBottom: "18px",
               }}
             >
-              Maiti <span style={{ opacity: 0.4 }}>& Sons</span>
+              <span style={{ fontSize: "1.7rem", fontWeight: 900, lineHeight: 1, color: "#fff", letterSpacing: "-0.04em" }}>MSE</span>
+              <span style={{ fontSize: "0.55rem", fontWeight: 800, letterSpacing: "0.1em", color: "rgba(255,255,255,0.6)" }}>
+                MAITI & SONS LOGISTICS
+              </span>
             </Link>
             <p style={{ fontSize: "0.85rem", lineHeight: 1.8, color: "rgba(255,255,255,0.36)", maxWidth: "220px" }}>
               Architecting the future of logistics through precision, transparency, and kinetic movement.

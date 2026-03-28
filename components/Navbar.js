@@ -19,9 +19,11 @@ export default function Navbar() {
       <nav className="ms-navbar">
         <div className="ms-navbar-inner">
           {/* Logo */}
-          <Link href="/" className="ms-navbar-logo">
-            Maiti{" "}
-            <span style={{ color: "#1a66a6", opacity: 0.85 }}>& Sons</span>
+          <Link href="/" className="ms-navbar-logo" style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: "2px" }}>
+            <span style={{ fontSize: "1.7rem", fontWeight: 900, lineHeight: 1, color: "#1a66a6" }}>MSE</span>
+            <span style={{ fontSize: "0.55rem", fontWeight: 800, letterSpacing: "0.1em", color: "#506072" }}>
+              MAITI & SONS LOGISTICS
+            </span>
           </Link>
 
           {/* Desktop Links */}
