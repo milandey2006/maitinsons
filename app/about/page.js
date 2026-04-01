@@ -13,9 +13,9 @@ const fadeUp = (delay = 0) => ({
 });
 
 const timeline = [
-  { year: "1982", event: "Founding Vision", desc: "Maiti & Sons Logistics Pvt. Ltd. starts with a single truck on single port, delivering regional supplies with a promise of 100% reliability." },
+  { year: "1982", event: "Founding Vision", desc: "MSE Logistics Pvt. Ltd. starts with a single truck on single port, delivering regional supplies with a promise of 100% reliability." },
   { year: "1998", event: "Domestic Expansion", desc: "The fleet grows to 50 vehicles, establishing the first domestic freight routes into neighboring territories." },
-  { year: "2012", event: "Digital Transformation", desc: "Maiti & Sons Logistics Pvt. Ltd. implements timely tracking across all logistics nodes." },
+  { year: "2012", event: "Digital Transformation", desc: "MSE Logistics Pvt. Ltd. implements timely tracking across all logistics nodes." },
   { year: "2024", event: "Global Leadership", desc: "Now a multi-national brand, we handle over 50,000 shipments annually with the same founding precision." },
 ];
 
@@ -54,7 +54,7 @@ export default function About() {
                   marginBottom: "16px",
                 }}
               >
-                MAITI & SONS LOGISTICS <span style={{ color: "#004e85" }}>PVT. LTD.</span>
+                MSE LOGISTICS <span style={{ color: "#004e85" }}>PVT. LTD.</span>
               </h1>
               <h2
                 style={{
@@ -65,7 +65,7 @@ export default function About() {
                   marginBottom: "24px",
                 }}
               >
-                Formerly known as Maiti & Sons Enterprises.
+                Efficient, Reliable, and Precise.
               </h2>
               <p style={{ fontSize: "1rem", lineHeight: 1.8, color: "#414750", maxWidth: "520px" }}>
                 Navigating global trade with unmatched architectural precision. From local haulage
@@ -177,8 +177,8 @@ export default function About() {
             className="ms-shadow"
           >
             <Image
-              src="/images/team.png"
-              alt="Maiti & Sons leadership team"
+              src="/images/team_mse.png"
+              alt="MSE Logistics leadership team"
               fill
               style={{ objectFit: "cover", objectPosition: "center top" }}
             />

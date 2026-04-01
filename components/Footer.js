@@ -31,7 +31,7 @@ export default function Footer() {
             >
               <span style={{ fontSize: "1.7rem", fontWeight: 900, lineHeight: 1, color: "#fff", letterSpacing: "-0.04em" }}>MSE</span>
               <span style={{ fontSize: "0.55rem", fontWeight: 800, letterSpacing: "0.1em", color: "rgba(255,255,255,0.6)" }}>
-                MAITI & SONS LOGISTICS
+                LOGISTICS
               </span>
             </Link>
             <p style={{ fontSize: "0.85rem", lineHeight: 1.8, color: "rgba(255,255,255,0.36)", maxWidth: "220px" }}>
@@ -80,7 +80,7 @@ export default function Footer() {
           }}
         >
           <p style={{ fontSize: "0.75rem", color: "rgba(255,255,255,0.22)" }}>
-            © {year} Maiti & Sons Logistics. All rights reserved.
+            © {year} MSE Logistics. All rights reserved.
           </p>
           <div style={{ display: "flex", gap: "20px" }}>
             {["LinkedIn", "Twitter", "Facebook"].map((s) => (

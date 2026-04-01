@@ -93,7 +93,7 @@ export default function Home() {
             >
               <Image
                 src="/images/hero.png"
-                alt="Maiti & Sons logistics fleet"
+                alt="MSE Logistics fleet"
                 fill
                 style={{ objectFit: "cover" }}
                 priority
@@ -201,7 +201,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── THE MAITI STANDARD ──────────────────────────────────── */}
+      {/* ── THE MSE STANDARD ────────────────────────────────────── */}
       <section style={{ background: "#f0eaf8", padding: "96px 0" }}>
         <div className="ms-container">
           <div
@@ -220,7 +220,7 @@ export default function Home() {
               >
                 <Image
                   src="/images/warehouse.png"
-                  alt="Maiti warehouse operations"
+                  alt="MSE warehouse operations"
                   fill
                   style={{ objectFit: "cover" }}
                 />
@@ -268,7 +268,7 @@ export default function Home() {
                   marginBottom: "48px",
                 }}
               >
-                The Maiti Standard
+                The MSE Standard
               </h2>
               <div style={{ display: "flex", flexDirection: "column", gap: "28px" }}>
                 {[
@@ -322,7 +322,7 @@ export default function Home() {
             style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "24px" }}
           >
             {[
-              { name: "Ramya Iyer, CEO, First Praviita", quote: '"Maiti & Sons transformed our distribution network. Their transparency and reliability are unmatched in the cargo market."' },
+              { name: "Ramya Iyer, CEO, First Praviita", quote: '"MSE Logistics transformed our distribution network. Their transparency and reliability are unmatched in the cargo market."' },
               { name: "Ananya Sharma, Logistics Dir, MedLink", quote: '"Their specialized routing for our fragile equipment was flawless. Highly recommended for complex cargo requirements."' },
               { name: "Vikram Desai, Supply Chain Mgr", quote: '"The real-time updates gave us full follow-up visibility we\'ve never experienced before. A truly world-class partner."' },
             ].map((t, i) => (
